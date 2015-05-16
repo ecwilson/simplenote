@@ -16,6 +16,21 @@ Route::get('/', 'WelcomeController@index');
 Route::get('home', 'HomeController@index');
 
 Route::controllers([
-	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
+]);
+
+/*
+ * Registration
+ */
+Route::get('auth/register', [
+    'as' => 'register_path',
+    'uses' => 'RegistrationController@create'
+]);
+Route::post('auth/register', [
+    'as' => 'register_path',
+    'uses' => 'RegistrationController@store'
+]);
+Route::get('auth/register/verify/{confirmationCode}', [
+    'as' => 'confirmation_path',
+    'uses' => 'RegistrationController@confirm'
 ]);
