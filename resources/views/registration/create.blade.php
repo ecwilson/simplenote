@@ -1,15 +1,22 @@
-@extends('app')
+@extends('layouts.default')
 
 @section('content')
     <div class="row">
         <div class="col-md-offset-3 col-md-6">
             <h1>Register</h1>
 
+            @include('layouts.partials._errors')
+
             {!! Form::open(['route' => 'register_path']) !!}
                 <!--- Username Field --->
                 <div class="form-group">
                     {!! Form::label('username', 'Username:') !!}
                     {!! Form::text('username', null, ['class' => 'form-control', 'required' => 'required']) !!}
+                </div>
+
+                <div class="form-group">
+                    {!! Form::label('name', 'Name:') !!}
+                    {!! Form::text('name', null, ['class' => 'form-control', 'required' => 'required']) !!}
                 </div>
 
                 <!--- Email Field --->
@@ -38,4 +45,4 @@
             {!! Form::close() !!}
         </div>
     </div>
-@endsection
+@stop
