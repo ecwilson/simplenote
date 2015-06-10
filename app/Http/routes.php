@@ -34,3 +34,19 @@ Route::get('auth/register/verify/{confirmationCode}', [
     'as' => 'confirmation_path',
     'uses' => 'RegistrationController@confirm'
 ]);
+
+/*
+ * Sessions
+ */
+Route::get('auth/login', [
+    'as' => 'login_path',
+    'uses' => 'SessionsController@create'
+]);
+Route::post('auth/login', [
+    'as' => 'login_path',
+    'uses' => 'SessionsController@store'
+]);
+Route::get('auth/logout', [
+    'as' => 'logout_path',
+    'uses' => 'SessionsController@destroy',
+]);
