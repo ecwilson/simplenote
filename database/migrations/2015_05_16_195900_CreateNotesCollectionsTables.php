@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCollectionsAndNotesTables extends Migration {
+class CreateNotesCollectionsTables extends Migration {
 
 	/**
 	 * Run the migrations.
