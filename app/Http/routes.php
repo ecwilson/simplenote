@@ -58,3 +58,5 @@ Route::get('auth/logout', [
 ]);
 
 Route::resource('notes', 'NotesController');
+
+Route::resource('collections', 'CollectionsController');
