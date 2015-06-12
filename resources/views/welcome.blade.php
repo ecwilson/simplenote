@@ -1,48 +1,34 @@
-<html>
-	<head>
-		<title>Laravel</title>
-		
-		<link href='//fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
+@extends('layouts.default')
 
-		<style>
-			body {
-				margin: 0;
-				padding: 0;
-				width: 100%;
-				height: 100%;
-				color: #B0BEC5;
-				display: table;
-				font-weight: 100;
-				font-family: 'Lato';
-			}
+@section('content')
+@include('flash::message')
+<div class="jumbotron">
+	<h1>Welcome to SimpleNote!</h1>
+	<p class="lead">Create simpler, more elegant notes with only the information you need in the simplest way possible.</p>
+	<p><a class="btn btn-lg btn-success" href="{{ url('/auth/register') }}" role="button">Sign up today</a></p>
+</div>
 
-			.container {
-				text-align: center;
-				display: table-cell;
-				vertical-align: middle;
-			}
+<div class="row marketing">
+	<div class="col-lg-6">
+		<h4>Notes</h4>
+		<p>Create clean, simple and easy to read notes for any occasion. Whether for school, work or anything else!</p>
 
-			.content {
-				text-align: center;
-				display: inline-block;
-			}
+		<h4>Collections</h4>
+		<p>Group your notes in collections so you can find them easier, as well as stay organized.</p>
 
-			.title {
-				font-size: 96px;
-				margin-bottom: 40px;
-			}
+		<h4>Sharing is Caring</h4>
+		<p>You can make your notes or collections public so other people can find &amp; use them.</p>
+	</div>
 
-			.quote {
-				font-size: 24px;
-			}
-		</style>
-	</head>
-	<body>
-		<div class="container">
-			<div class="content">
-				<div class="title">Laravel 5</div>
-				<div class="quote">{{ Inspiring::quote() }}</div>
-			</div>
-		</div>
-	</body>
-</html>
+	<div class="col-lg-6">
+		<h4>Responsive</h4>
+		<p>You can create notes from your desktop or on the go with your smartphone or tablet!</p>
+
+		<h4>Easy to Use</h4>
+		<p>We've tried to make the note taking process as simple and easy as possible.</p>
+
+		<h4>Fast</h4>
+		<p>Our service strives to be as fast as possible for your note taking needs.</p>
+	</div>
+</div>
+@endsection

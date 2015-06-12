@@ -1,22 +1,23 @@
 @extends('layouts.default')
 
-@section('title', 'Notes - ')
+@section('title'){{$collection->name}} Collection - @endsection
 
 @section('css')
 <link rel="stylesheet" type="text/css" href="{{ asset('css/sweetalert.css') }}">
 @endsection
 
 @section('content')
-	<h2>Notes <a href="{{ url('/notes/create') }}" class="no-dec"><i class="fa fa-fw fa-plus-square-o"></i></a></h2>
-	@include('flash::message')
-	@forelse ($notes as $note)
-		<div class="note">
+@include('flash::message')
+@include('collections.partials._info')
+<hr>
+@foreach($notes as $note)
+	@if ($note->is_public || $note->user == Auth::User())
+	<div class="note">
 		@include('notes.partials._info')
 		@include('notes.partials._stats')
-		</div>
-	@empty
-		<h4>No notes at this time...</h4>
-	@endforelse
+	</div>
+	@endif
+@endforeach
 @endsection
 
 @section('js')

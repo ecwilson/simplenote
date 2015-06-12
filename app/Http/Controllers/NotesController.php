@@ -26,7 +26,7 @@ class NotesController extends Controller {
 	 */
 	public function index()
 	{
-		$notes = Note::where('user_id', '=', Auth::User()->id);
+		$notes = Note::where('user_id', '=', Auth::User()->id)->get();
 		for ($i=0; $i < count($notes); $i++) { 
 			$notes[$i]->shortText = substr($notes[$i]->body_text, 0, 500);
 		}
@@ -41,6 +41,7 @@ class NotesController extends Controller {
 	public function create()
 	{
 		$collections = User::find(Auth::User()->id)->collections;
+		$collections = $collections != null ? $collections : array();
 		return view('notes.create', compact('collections'));
 	}
 

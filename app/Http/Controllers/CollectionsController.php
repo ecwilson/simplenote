@@ -25,7 +25,7 @@ class CollectionsController extends Controller {
 	 */
 	public function index()
 	{
-		$collections = Collection::where('user_id', '=', Auth::User()->id);
+		$collections = Collection::where('user_id', '=', Auth::User()->id)->get();
 		return view('collections.index', compact('collections'));
 	}
 
@@ -91,8 +91,7 @@ class CollectionsController extends Controller {
 			}
 		}
 
-		$notes = $collection->notes();
-
+		$notes = $collection->notes()->get();
 		return view('collections.show', compact('collection', 'notes'));
 	}
 

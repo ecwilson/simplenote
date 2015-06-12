@@ -16,7 +16,6 @@
 	@empty
 		<h3>No collections at this time...</h3>
 	@endforelse
-	{!! $collections->render() !!}
 @endsection
 
 @section('js')
