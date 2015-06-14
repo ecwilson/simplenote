@@ -28,7 +28,11 @@
 
 ## Screenshots
 ![s1](http://i.imgur.com/Xluuyr3.png)
+<hr>
 ![s2](http://i.imgur.com/xL1Gq8H.png)
+<hr>
 ![s3](http://i.imgur.com/H4pOGzZ.png)
+<hr>
 ![s4](http://i.imgur.com/gJRuTBQ.png)
+<hr>
 ![s5](http://i.imgur.com/Wzpe3ex.png)
