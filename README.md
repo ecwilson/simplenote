@@ -24,4 +24,11 @@
 3. Use NGINX as a web server
 4. Use Postgresql as an SQL database
 5. Use version control
-6. Use an MVC web framework to simplify the process
+6. Use an MVC web framework to simplify the proces
+
+## Screenshots
+![s1](http://i.imgur.com/Xluuyr3.png)
+![s2](http://i.imgur.com/xL1Gq8H.png)
+![s3](http://i.imgur.com/H4pOGzZ.png)
+![s4](http://i.imgur.com/gJRuTBQ.png)
+![s5](http://i.imgur.com/Wzpe3ex.png)
